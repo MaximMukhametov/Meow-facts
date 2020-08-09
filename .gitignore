@@ -12,3 +12,4 @@
 /pg_data
 /server/celery*
 .env
+fabfile.py
