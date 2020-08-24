@@ -3,7 +3,6 @@ pipeline {
         dockerfile {
         filename 'Dockerfile.jenkins'
         dir 'server/ci/jenkins'
-        label 'docker_for_testing'
     }
     }
     stages {
