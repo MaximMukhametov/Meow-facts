@@ -8,6 +8,8 @@ pipeline {
                 sh 'python -V'
                 sh 'ls -la'
                 sh 'pwd'
+                sh 'cd server/'
+                sh 'pip install -r requirements.txt'
                 echo 'Building..'
             }
         }
