@@ -1,0 +1,23 @@
+pipeline {
+    agent {
+        docker { image 'python:3.7-slim' }
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'python -V'
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
