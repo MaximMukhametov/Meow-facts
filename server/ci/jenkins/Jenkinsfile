@@ -5,17 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'python -V'
-                sh 'ls -la'
-                sh 'pwd'
-                sh 'cd server/'
-                sh 'ls -la'
-                sh 'pwd'
-                sh 'python3 -m venv venv'
-                bash '''#!/bin/bash
-                 source venv/bin/activate
-                '''
-                sh 'python -m pip install -r server/requirements.txt --user'
+                sh 'sudo python -m pip install -r server/requirements.txt --user'
                 echo 'Building..'
             }
         }
