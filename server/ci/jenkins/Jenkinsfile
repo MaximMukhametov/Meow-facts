@@ -11,7 +11,7 @@ pipeline {
                 sh 'cd server/'
                 sh 'ls -la'
                 sh 'pwd'
-                sh 'pip install -r server/requirements.txt'
+                sh 'pip install -r server/requirements.txt --user'
                 echo 'Building..'
             }
         }
