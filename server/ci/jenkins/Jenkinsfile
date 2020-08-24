@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        dockerfile {
-        filename 'Dockerfile.jenkins'
-        dir 'server/ci/jenkins'
-    }
-    }
+    agent { dockerfile true }
     stages {
         stage('Build') {
             steps {
