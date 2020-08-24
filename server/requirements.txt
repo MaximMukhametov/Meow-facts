@@ -19,3 +19,8 @@ requests==2.24.0
 channels-redis==3.0.1
 channels==2.4.0
 daphne==2.5.0
+
+# тестирование
+pytest-django==3.9.0
+pytest-cov==2.10.0
+pytest-flake8==1.0.6
