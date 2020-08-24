@@ -9,7 +9,7 @@ pipeline {
                 sh 'ls -la'
                 sh 'pwd'
                 sh 'cd server/'
-                sh 'pip install -r requirements.txt'
+                sh 'pip install -r requirements.txt --user'
                 echo 'Building..'
             }
         }
