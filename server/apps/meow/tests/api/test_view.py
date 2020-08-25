@@ -7,4 +7,4 @@ def test_get_users_view():
     url = reverse('run_task')
     response = APIClient().get(url)
 
-    assert response.status_code == 200
+    assert response.status_code == 2001
