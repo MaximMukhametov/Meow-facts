@@ -2,7 +2,7 @@ pipeline {
     agent {
     dockerfile {
         filename 'server/Dockerfile'
-        args '--env DJANGO_SETTINGS_MODULE=config.settings.settings'
+        args '/bin/bash'
     }
 }
     stages {
