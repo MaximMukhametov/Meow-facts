@@ -10,3 +10,4 @@ RUN pip install -r requirements.txt
 
 COPY ./server /server
 RUN python ./manage.py collectstatic --noinput
+
