@@ -2,7 +2,7 @@ pipeline {
     agent {
     dockerfile {
         filename 'server/Dockerfile'
-        args '--entrypoint pytest'
+        args 'pytest'
     }
 }
     stages {
