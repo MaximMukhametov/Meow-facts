@@ -1,7 +1,8 @@
 pipeline {
     agent {
     dockerfile {
-        filename 'server/ci/jenkins/Dockerfile.jenkins'
+        filename 'server/Dockerfile'
+        args '--entrypoint pytest'
     }
 }
     stages {
