@@ -1,15 +1,9 @@
-pipeline {
-    agent {
-    dockerfile {
-        filename 'server/Dockerfile'
-    }
-}
-    stages {
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-                sh 'cd server/ && pytest'
-            }
-        }
+node {
+    checkout scm
+
+    def imageForTesting = docker.build("meow", "-f server/Dockerfile .")
+
+    imageForTesting.inside {
+        sh 'cd server/ && pytest'
     }
 }
