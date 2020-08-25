@@ -8,10 +8,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'pwd'
-                sh 'ls -la'
                 echo 'Testing..'
-                sh 'pytest server/'
+                sh 'cd server/ && pytest'
             }
         }
     }
