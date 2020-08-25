@@ -2,24 +2,15 @@ pipeline {
     agent {
     dockerfile {
         filename 'server/Dockerfile'
-        args '--entrypoint pytest'
     }
 }
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh 'pytest'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
         }
     }
 }
