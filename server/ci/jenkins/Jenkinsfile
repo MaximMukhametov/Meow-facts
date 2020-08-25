@@ -1,8 +1,7 @@
 pipeline {
     agent {
     dockerfile {
-        filename 'Dockerfile.jenkins'
-        dir 'server/ci/jenkins'
+        filename 'server/ci/jenkins/Dockerfile.jenkins'
     }
 }
     stages {
