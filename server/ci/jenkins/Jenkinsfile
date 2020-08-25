@@ -2,11 +2,14 @@ pipeline {
     agent {
     dockerfile {
         filename 'server/Dockerfile'
+        args '--env DJANGO_SETTINGS_MODULE=config.settings.settings'
     }
 }
     stages {
         stage('Test') {
             steps {
+                sh 'pwd'
+                sh 'ls -la'
                 echo 'Testing..'
                 sh 'pytest'
             }
